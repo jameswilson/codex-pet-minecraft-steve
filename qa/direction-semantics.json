@@ -1,0 +1,143 @@
+{
+  "ok": true,
+  "reviewRequired": true,
+  "reviewed_by": "independent-visual-qa-worker",
+  "review_summary": "Identity and style are consistent across rows 0-8, and the 16-direction loop reads correctly overall with only boundary-soft warnings at the top and near the four cardinal transitions.",
+  "directions": [
+    {
+      "direction": "000",
+      "label": "000 up",
+      "verdict": "warning",
+      "expected": "up",
+      "observed": "frontal body with head tipped straight up",
+      "reason": "Horizontal evidence: both arms, cheeks, eyes, and beard lobes are balanced around the sprite center with no clear left-right lead. Vertical evidence: pupils ride high under the brows and the nose-mouth-beard stack foreshortens downward, so it reads as up but remains borderline with neutral."
+    },
+    {
+      "direction": "022.5",
+      "label": "022.5 up-right",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "slight screen-right yaw plus upward tilt",
+      "reason": "Horizontal evidence: the screen-right cheek, nose, and jaw project farther than screen-left. Vertical evidence: pupils sit high and the chin is lifted, giving a clear up-right read."
+    },
+    {
+      "direction": "045",
+      "label": "045 up-right",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "moderate screen-right yaw with clear upward tilt",
+      "reason": "Horizontal evidence: face plane opens to screen-right and screen-left side recedes. Vertical evidence: gaze stays high and the underside of the jaw is more visible than in neutral."
+    },
+    {
+      "direction": "067.5",
+      "label": "067.5 up-right",
+      "verdict": "warning",
+      "expected": "up-right",
+      "observed": "strong screen-right yaw with a small remaining upward tilt",
+      "reason": "Horizontal evidence: nose and beard project strongly to screen-right and the torso follows. Vertical evidence: the eyes still sit slightly high and the chin remains lifted, but it is close to pure right."
+    },
+    {
+      "direction": "090",
+      "label": "090 right",
+      "verdict": "pass",
+      "expected": "right",
+      "observed": "clean screen-right profile",
+      "reason": "Horizontal evidence: head and torso are side-on to screen-right with the face edge and nose projecting right and the opposite side hidden. Vertical evidence: head pitch is near neutral so this lands as the right cardinal."
+    },
+    {
+      "direction": "112.5",
+      "label": "112.5 down-right",
+      "verdict": "pass",
+      "expected": "down-right",
+      "observed": "screen-right yaw with slight downward tilt",
+      "reason": "Horizontal evidence: rightward profile remains dominant. Vertical evidence: pupils sit lower and the chin begins to tuck, producing a clear down-right read."
+    },
+    {
+      "direction": "135",
+      "label": "135 down-right",
+      "verdict": "pass",
+      "expected": "down-right",
+      "observed": "moderate down-right diagonal",
+      "reason": "Horizontal evidence: the face still opens to screen-right. Vertical evidence: the brow lowers over the eyes and the head pitches down more clearly than at 112.5."
+    },
+    {
+      "direction": "157.5",
+      "label": "157.5 down-right",
+      "verdict": "warning",
+      "expected": "down-right",
+      "observed": "mostly frontal down pose with residual screen-right bias",
+      "reason": "Horizontal evidence: the nose and right facial plane still favor screen-right. Vertical evidence: the crown enlarges and the eyes drop under the brow, but the pose sits close to pure down."
+    },
+    {
+      "direction": "180",
+      "label": "180 down",
+      "verdict": "pass",
+      "expected": "down",
+      "observed": "frontal body with head pitched straight down",
+      "reason": "Horizontal evidence: shoulders, arms, and facial mass are centered with no lateral lead. Vertical evidence: the top of the head dominates, the eyes sit low, and the face is compressed downward, making the down cardinal clear."
+    },
+    {
+      "direction": "202.5",
+      "label": "202.5 down-left",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "slight screen-left yaw plus downward tilt",
+      "reason": "Horizontal evidence: the screen-left cheek and nose lead while screen-right recedes. Vertical evidence: pupils remain low and the chin stays tucked, yielding down-left."
+    },
+    {
+      "direction": "225",
+      "label": "225 down-left",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "moderate down-left diagonal",
+      "reason": "Horizontal evidence: leftward face opening is obvious. Vertical evidence: lowered gaze and head pitch are stronger than at 202.5, so the quadrant is clear."
+    },
+    {
+      "direction": "247.5",
+      "label": "247.5 down-left",
+      "verdict": "warning",
+      "expected": "down-left",
+      "observed": "strong screen-left yaw with a small remaining downward tilt",
+      "reason": "Horizontal evidence: nose, beard, and torso project to screen-left. Vertical evidence: the eyes still sit a bit low and the head is not fully level, but it is close to pure left."
+    },
+    {
+      "direction": "270",
+      "label": "270 left",
+      "verdict": "pass",
+      "expected": "left",
+      "observed": "clean screen-left profile",
+      "reason": "Horizontal evidence: head and torso are side-on to screen-left with the face edge projecting left and the opposite side hidden. Vertical evidence: pitch is essentially neutral, so this reads as the left cardinal."
+    },
+    {
+      "direction": "292.5",
+      "label": "292.5 up-left",
+      "verdict": "pass",
+      "expected": "up-left",
+      "observed": "screen-left yaw with slight upward tilt",
+      "reason": "Horizontal evidence: leftward profile is clear. Vertical evidence: pupils rise and the chin lifts slightly, giving an up-left read."
+    },
+    {
+      "direction": "315",
+      "label": "315 up-left",
+      "verdict": "pass",
+      "expected": "up-left",
+      "observed": "moderate up-left diagonal",
+      "reason": "Horizontal evidence: left facial plane leads and screen-right recedes. Vertical evidence: eyes sit high and the jawline opens upward more than at 292.5."
+    },
+    {
+      "direction": "337.5",
+      "label": "337.5 up-left",
+      "verdict": "warning",
+      "expected": "up-left",
+      "observed": "mostly frontal up pose with residual screen-left bias",
+      "reason": "Horizontal evidence: a small leftward face lead remains. Vertical evidence: pupils are high and the chin is lifted, but the pose sits close to the 000 up boundary."
+    }
+  ],
+  "review_warnings": [
+    "000 up is readable as up but borderline because the frontal symmetry reduces left-right cueing.",
+    "067.5 up-right to 090 right slightly compresses the remaining upward pitch before the pure right cardinal.",
+    "157.5 down-right to 180 down slightly compresses the remaining rightward bias into a nearly frontal down pose.",
+    "247.5 down-left to 270 left slightly compresses the remaining downward pitch before the pure left cardinal.",
+    "337.5 up-left to 000 up slightly compresses the remaining leftward bias into a nearly symmetric up pose."
+  ]
+}
