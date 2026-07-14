@@ -111,6 +111,10 @@ This repo uses GitHub Actions for packaging policy rather than committing instal
 
 For a public repo like this, that is the best balance: keep the canonical art and QA in git, keep reproducible package output out of git, and publish the zip from automation instead of maintaining it by hand.
 
+## Related project
+
+Another Steve-adjacent Codex pet repo is [`koka99cab/pet-steve`](https://github.com/koka99cab/pet-steve).
+
 ## Fan project note
 
 This is an unofficial fan work inspired by Minecraft Steve. Minecraft, Steve, and related trademarks and character rights belong to Mojang Studios and Microsoft.
