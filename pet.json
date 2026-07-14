@@ -1,0 +1,7 @@
+{
+  "id": "steve",
+  "displayName": "Steve",
+  "description": "A blocky pixel adventurer inspired by Minecraft Steve.",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp"
+}

@@ -11,6 +11,7 @@ This repository contains the working files used to generate, review, and validat
 The primary release artifact in this repository is:
 
 - `final/spritesheet-extended.webp`
+- `pet.json`
 
 That file is the validated v2 atlas:
 
@@ -59,17 +60,22 @@ To install this pet manually:
 
 1. Create `~/.codex/pets/steve/`.
 2. Copy `final/spritesheet-extended.webp` to `~/.codex/pets/steve/spritesheet.webp`.
-3. Create `~/.codex/pets/steve/pet.json` with:
+3. Copy `pet.json` to `~/.codex/pets/steve/pet.json`.
 
-```json
-{
-  "id": "steve",
-  "displayName": "Steve",
-  "description": "A blocky pixel adventurer inspired by Minecraft Steve.",
-  "spriteVersionNumber": 2,
-  "spritesheetPath": "spritesheet.webp"
-}
+## Build package
+
+For a ready-to-upload install bundle, run:
+
+```bash
+./scripts/build-package.sh
 ```
+
+That script builds:
+
+- `package/steve/`
+- `dist/steve-codex-pet.zip`
+
+The generated package output is intentionally ignored by git because it is reproducible from tracked source files.
 
 ## Repository layout
 
@@ -93,6 +99,17 @@ The repo keeps the evidence used to approve the final atlas, including:
 - `qa/review.json`
 
 If you change the atlas, update the relevant QA artifacts in the same change so the repo stays auditable.
+
+Do not ignore the whole `qa/` directory. Most of it is part of the review trail. The only ignored QA file is `qa/run-summary.json`, which is machine-local and includes absolute paths.
+
+## GitHub automation
+
+This repo uses GitHub Actions for packaging policy rather than committing install bundles:
+
+- on pull requests and pushes to `main`, CI builds the install package and validates that the manifest, atlas metadata, and packaged sprite stay in sync
+- on published GitHub releases, CI uploads `dist/steve-codex-pet.zip` as a release asset
+
+For a public repo like this, that is the best balance: keep the canonical art and QA in git, keep reproducible package output out of git, and publish the zip from automation instead of maintaining it by hand.
 
 ## Fan project note
 

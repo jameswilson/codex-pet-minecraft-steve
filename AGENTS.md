@@ -7,6 +7,7 @@ This repository is an asset-heavy Codex pet project, not a conventional applicat
 ## Source of truth
 
 - The current release artifact is `final/spritesheet-extended.webp`.
+- The canonical install manifest is `pet.json`.
 - The current atlas format is v2: `1536 x 2288`, `8 x 11`, `192 x 208` cells, `spriteVersionNumber: 2`.
 - Use `final/spritesheet-extended.json` and `final/validation-extended.json` to confirm layout details before documenting or changing anything.
 - Treat `final/spritesheet.webp` and `final/spritesheet.png` as legacy 9-row outputs unless the user explicitly asks to work on backward compatibility.
@@ -14,9 +15,10 @@ This repository is an asset-heavy Codex pet project, not a conventional applicat
 ## Working rules
 
 - Make surgical changes only. Do not regenerate art, frames, prompts, or QA files unless the task explicitly requires it.
-- Do not assume untracked generated outputs belong in the repo. Ask before staging things like `package/` or other new generated folders that were not explicitly requested.
+- Do not assume untracked generated outputs belong in the repo. `package/` and `dist/` are reproducible outputs and should stay untracked unless the user explicitly asks otherwise.
 - When editing docs, describe the tracked repository state, not a hypothetical future package layout.
 - If you need install instructions, document the manual Codex pet folder format using the validated v2 atlas.
+- Do not propose ignoring the whole `qa/` folder. Most QA files are part of the repository's review evidence; only machine-local summaries should be ignored.
 
 ## Repository map
 
@@ -34,6 +36,7 @@ This repository is an asset-heavy Codex pet project, not a conventional applicat
 - Before calling a spritesheet "final", verify that the artifact path, dimensions, and row count match `final/spritesheet-extended.json` and `final/validation-extended.json`.
 - Preserve the QA trail when making asset changes. A pet atlas change without refreshed QA is incomplete.
 - For README or metadata updates, avoid touching QA JSON unless the content itself is wrong.
+- If you change the install manifest or canonical atlas, make sure `scripts/build-package.sh` and CI still produce a matching `package/steve` bundle.
 
 ## Commit guidance
 

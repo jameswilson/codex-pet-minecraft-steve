@@ -1,0 +1,8 @@
+.DS_Store
+
+# Reproducible install/package outputs.
+/package/
+/dist/
+
+# Machine-local QA summary with absolute paths.
+/qa/run-summary.json
